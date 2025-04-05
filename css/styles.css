@@ -1,0 +1,339 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "noto sans", sans-serif;
+}
+
+:root {
+    --Neutral-900: hsl(227, 75%, 14%);
+    --Neutral-800: hsl(226, 25%, 17%);
+    --Neutral-700: hsl(225, 23%, 24%);
+    --Neutral-600: hsl(226, 11%, 37%);
+    --Neutral-300: hsl(0, 0%, 78%);
+    --Neutral-200: hsl(217, 61%, 90%);
+    --Neutral-100: hsl(0, 0%, 93%);
+    --Neutral-0: hsl(200, 60%, 99%);
+
+    /* ### Reds  */
+
+
+    --Red-400: hsl(3, 86%, 64%);
+    --Red-500: hsl(3, 71%, 56%);
+    --Red-700: hsl(3, 77%, 44%);
+
+    /* ### Gradient  */
+    --Light-Gradient: linear-gradient(180deg, #EBF2FC 0%, #EEF8F9 100%);
+    --Dark-Gradient: linear-gradient(180deg, #040918 0%, #091540 100%);
+}
+
+
+body {
+    min-height: 100vh;
+    /* Kam se kam height 100vh ho */
+    height: auto;
+    padding: 40px;
+    width: 100%;
+
+}
+
+.themeChanger {
+    padding: 10px;
+    background-color: var(--Neutral-600);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.themeChanger:hover {
+    border: 2px solid var(--Red-700);
+}
+
+.afternav {
+    margin-top: 50px;
+    display: flex;
+    height: 60px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.afternav ul {
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    gap: 10px;
+    list-style: none;
+}
+
+.afternav ul li {
+    font-size: 1.1rem;
+    padding: 8px 15px;
+    font-weight: 500;
+    border-radius: 25px;
+
+}
+
+.cardsContainer {
+    margin-top: 20px;
+    display: grid;
+    /* overflow-y: scroll; */
+    /* height: 100vh; */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    /* grid-template-columns: 1fr 1fr 1fr; */
+    gap: 20px;
+}
+
+.Card {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    /* width: 350px; */
+    padding: 15px;
+    border-radius: 15px;
+}
+
+.up {
+    display: flex;
+    gap: 15px;
+    /* align-items: center; */
+}
+
+.cardImg {
+    /* height:80px; */
+    width: 80px;
+}
+
+.cardImg img {
+    /* height: 100%; */
+    width: 100%;
+}
+
+.cardText {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.title {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.cardText p {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.down {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.form-check-input:checked {
+    background-color: var(--Red-700) !important;
+    /* Change background when switch is ON */
+    border-color: var(--Red-700) !important;
+    /* Change border to match */
+}
+
+.form-check-input {
+    background-color: #f0f0f0;
+    /* Default background (when OFF) */
+    border-color: #ccc;
+    height: 20px;
+    /* Default border */
+
+}
+
+.removeBtn {
+    border: none;
+    outline: none;
+    height: 35px;
+    padding-inline: 20px;
+    border-radius: 25px;
+    box-shadow: 0px 0px 3px var(--Neutral-100);
+}
+
+/* light theme */
+.logoLight {
+    width: 200px;
+}
+
+.logoLight img {
+    height: 100%;
+    width: 100%;
+}
+
+.lightBody {
+    color: var(--Neutral-900);
+    background: linear-gradient(180deg, #EBF2FC 0%, #EEF8F9 100%);
+}
+
+.liLight {
+    background-color: var(--Neutral-0);
+    /* color: ; */
+}
+
+.liLight:hover {
+    cursor: pointer;
+    border: 2px solid var(--Red-700);
+}
+
+.liLightActive {
+    background-color: var(--Red-700);
+    color: var(--Neutral-0);
+}
+
+.lightCard {
+    background-color: var(--Neutral-0);
+    box-shadow: 0px 0px 3px var(--Neutral-600);
+}
+
+.lightRemove {
+    background-color: var(--Neutral-0);
+    color: var(--Neutral-900);
+    font-size: medium;
+    font-weight: 500;
+    border: 1px solid var(--Neutral-600);
+}
+
+.lightRemove:hover {
+    border: 2px solid var(--Red-700);
+}
+
+.lightPara {
+    color: var(--Neutral-600);
+}
+
+/* light theme */
+/* dark theme */
+.logoDark {
+    width: 200px;
+}
+
+.logoDark svg {
+    height: 100%;
+    width: 100%;
+}
+
+.Nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 25px;
+    border-radius: 15px;
+    background-color: var(--Neutral-700);
+}
+
+.liDark {
+    background-color: var(--Neutral-700);
+}
+
+.liDark:hover {
+    cursor: pointer;
+    border: 2px solid var(--Red-700);
+}
+
+.liDarkActive {
+    background-color: var(--Red-700);
+    color: var(--Neutral-900);
+}
+
+.darkBody {
+    color: var(--Neutral-0);
+    background: linear-gradient(180deg, #040918 0%, #091540 100%);
+}
+
+.darkCard {
+    background-color: var(--Neutral-800);
+    box-shadow: 0px 0px 3px var(--Neutral-100);
+}
+
+.darkRemove {
+    background-color: var(--Neutral-800);
+    color: var(--Neutral-100);
+    font-size: medium;
+    font-weight: 500;
+}
+
+.darkRemove:hover {
+    cursor: pointer;
+    background-color: var(--Red-700);
+    color: var(--Neutral-800);
+    box-shadow: none;
+}
+
+.darkPara {
+    color: var(--Neutral-200);
+}
+
+/* dark theme */
+
+
+.none {
+    display: none;
+}
+
+
+@media(max-width:540px) {
+    body {
+        padding: 20px;
+    }
+
+    .afternav {
+        flex-direction: column;
+        margin-top: 25px;
+        height: auto;
+        gap: 10px;
+    }
+
+    .Nav {
+        padding: 10px;
+        border-radius: 8px;
+    }
+
+    ul {
+        padding: 0px;
+    }
+
+    ul,
+    li {
+        width: 100%;
+        font-size: 1rem;
+        justify-content: center;
+        display: flex;
+    }
+}
+
+@media(max-width:280px) {
+    body{
+        padding: 10px;
+    }
+    .cardsContainer{
+        grid-template-columns: 1fr;
+    }
+    .Card{
+        width: auto;
+        padding: 15px;
+    }
+    .up{
+        flex-direction: column;
+    }
+    .removeBtn{
+        padding-inline: 10px;
+        height: 30px;
+        font-size: 15px;
+    }
+    .logoDark,.logoLight{
+        width: 150px;
+    }
+    .afternav ul li{
+        font-size: 1rem;
+    }
+}
